@@ -1,0 +1,16 @@
+<main role="main">
+  <div class="grid-row">
+    {{ $paginator := .Paginate (where .Data.Pages.ByLastmod.Reverse "Type" "post") 24 }}
+    {{ range $paginator.Pages }}
+    <div class="grid-cell">
+      <article itemscope itemtype="http://schema.org/BlogPosting">
+        aaa
+       </article>
+    </div>
+    {{ end }}
+  </div>
+</main>
+
+<nav class="c-paginator">
+  {{ template "_internal/pagination.html" . }}
+</nav>
